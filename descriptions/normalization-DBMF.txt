@@ -1,0 +1,19 @@
+The relations are in Boyce-Codd normal form. All functional dependencies in this project are the following:
+    In album-schema:	  albumid → company, title
+    In artist-schema:	  artistid → name
+    In song_perf-schema:  songid → title, year, loudness, expert_rate, danceability, artistid
+    In user-schema:	  userid → password, age, gender, lastname, firstname
+
+Notice that functional dependencies for favorite, belong, produce-schemas are not present here because in all of these relations,
+the only two attributes of each relation determine everything in the relation, so nothing would be left to be determined.
+For example, in produce-schema, one albumid can have multiple artists participating and one artist can produce multiple albums,
+so neither albumid nor artistid can determine each other. That is, to have a functional dependency in a form of X→Y,
+X should be albumid and artistid together, which in turn makes Y empty.
+
+All of the relations are in first normal form (1NF) since every attribute in every row contains only one single (atomic) value.
+Next, all of relations are in second normal form (2NF) because they are in 1NF and every non-key attribute is fully functionally
+determined by every key of the relations as all keys in every relation consist of one attribute and thus taking a proper subset
+of one attribute is impossible in the first place. Moreover, all of the relations are in the third normal form (3NF) since they
+are in 2NF and none of the non-key attribute in each relation is transitive dependent on any of the keys.
+Lastly, determinants (the left-hand-side of the functional dependencies) in all relations are super keys. Since our relations
+are in 3NF and in all functional dependencies X→Y, X is a super key, our relational schemas are in Boyce-Codd normal form.
