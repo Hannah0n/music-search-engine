@@ -1,0 +1,10 @@
+Original Data for songid, album title, albumid, artistid, name (of artist), year (of song release), title (of song), expert_rate,
+loudness, danceability are from https://labrosa.ee.columbia.edu/millionsong/pages/getting-dataset. Instead of using information on
+millions of songs, I downloaded a subset of the whole dataset from this website which consists of randomly selected 10,000 songs.
+The original dataset was in .h5 format, but .csv files are availabe at https://think.cs.vt.edu/corgis/csv/music/music.html. 
+
+Randomly generated dummy data for 1000 distinct users (including userid, firstname, lastname, password, age, gender) are from
+http://www.convertcsv.com/generate-test-data.htm.
+
+Music company lists are from https://www.ranker.com/list/music-companies/reference. Out of the top 100 music firms,
+each album was assigned with a random music company by using ‘=INDEX(data, RANDBETWEEN(1, ROWS(data)), 1) inside a csv file.
