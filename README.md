@@ -3,8 +3,9 @@
 The main idea of this project is for users to store their favorite songs and to search songs by their title, album, and artist. For instance, a user's input to the search engine could be:
   * song name ‘lonely’, OR
   * song name ‘lonely’ and artist name ‘akon’, OR
-  * song name ‘lonely’, artist name ‘akon’ and album title ‘lonely’.
-The result will be shown by ‘best matching’ to ‘least matching’ (i.e. the exact matching result comes first, ‘%name’ comes next, ‘name%’ comes next, and then ‘%name%’ comes at last from the SQL query). The search engine gives users a list of songs with song title, album name, year the song was leased, artist name, album title, and the company name that produced the song’s album.
+  * song name ‘lonely’, artist name ‘akon’ and album title ‘lonely’
+  
+The result will be shown by ‘best matching’ to ‘least matching’ (i.e. the exact matching result comes first, ‘%name’ comes next, ‘name%’ comes next, and then ‘%name%’ comes at last from the SQL query).The search engine gives users a list of songs with song title, album name, year the song was leased, artist name, album title, and the company name that produced the song’s album.
 
 **What users can do**
 1. create an account with their userID (in their email form), password, age, gender, and first and last name
