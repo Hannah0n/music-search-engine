@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>	
+
+	<title>create account</title>	
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+	
+
+	
+    <div class="begin">
+	<h1>Create an account</h1>
+    </div>
+    <div class="end">
+	<form method="post" name="create_account_form" action="createAccount.php" >
+	    <label for="userid" class="fixed" >USER ID: (Your email address will be used as your user ID)</label><br>
+		<input type="text" name="userid" id="email" required><br>
+		
+		<label for="firstname" class="fixed">First Name:</label><br>
+		<input type="text" name="firstname" id="firstname" required><br>
+
+		<label for="lastname" class="fixed">Last Name:</label><br>
+		<input type="text" name="lastname" id="lastname" required><br>
+
+		<label for ="age" class="fixed" > Age: </label><br>
+		<input type="text" name ="age" id="age" required><br><p id="respond" style="color: red;"></p>
+
+
+		Gender:<br>
+		<input type="radio" name="gender" id= "female" value="1"> Female <br>
+		<input type="radio" name="gender" id= "male" value="0"> Male <br>
+		<br>
+
+        <label for="password" class="fixed"> Create your password: </label><br>
+		<input type="password" name="password" id="password" required><br>
+
+        
+        <label for="confirm_password" class="fixed"> Confirm your passoword: </label><br>
+		<input type="password" name="confirm_password" id="confirm_password" required >
+	    <p id="respond2" style="color: red;"></p>
+
+		<br><br>
+		<input type="submit" class="button" id="button" value="Submit" onclick="validateAge();validatePW()"> 
+		
+	</form>
+</div>
+</div>
+
+<script src="validation.js"></script>
+
+</body>
+</html>
