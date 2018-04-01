@@ -40,13 +40,16 @@ loudness float(6, 5),
 danceability float(6, 5),
 artistid varchar(400) NOT NULL,
 PRIMARY KEY (songid),
+-- a deletion of an artist will automatically delete the artist’s songs as well
 FOREIGN KEY (artistid) REFERENCES artist(artistid) ON DELETE CASCADE);
+
 
 create table favorite (
 songid varchar(400) NOT NULL,
 userid varchar(400) NOT NULL,
 PRIMARY KEY (songid, userid),
 FOREIGN KEY (userid) REFERENCES user(userid),
+-- When a song is deleted, the song is also deleted from user’s favorite list
 FOREIGN KEY (songid) REFERENCES song_perf(songid) ON DELETE CASCADE);
 
 
