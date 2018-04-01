@@ -62,6 +62,8 @@
 				</table><br/>
 				<?php
 			if($searchtype == 'company'){
+				/* The number for age shown in age group table is the floor value
+				(i.e. the table will show 10 for an age group of 10 to 19). */
 				$sql = "select floor(u.age/10.00)*10 as agegroup, count(*) as count FROM album ab, song_perf sp, belong b, favorite f, user u WHERE sp.songid = b.songid AND b.albumid = ab.albumid AND f.songid = sp.songid AND f.userid = u.userid AND ab.company = '$searchvalue' group by 1 order by 1;";
 			} else{
 				$sql = "select floor(u.age/10.00)*10 as agegroup, count(*) as count FROM artist a, song_perf sp, favorite f, user u WHERE f.songid = sp.songid AND f.userid = u.userid AND sp.artistid = a.artistid AND a.name = '$searchvalue' group by 1 order by 1;";
